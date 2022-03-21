@@ -2,7 +2,7 @@ public class pizza {
     String name;
     String crust_thickness;
     String crust_type;
-    String[] pizza_ingredients;
+    String[][] pizza_ingredients;
     public pizza(String name, crust_thickness crust_thickness, crust_type crust_type) throws Exception {
         if(name == null) {
             throw new Exception("Name cannot be null");
@@ -25,7 +25,10 @@ public class pizza {
     }
     public void addIngredient(ingredients_type ing) {
         // code
-        ingredients poop = ingredients.poop(this.name, ing);
+        // add ingredient to the list of ingredients.
+//        ingredients poop = ingredients.poop(this.name, ing);
+        int len = pizza_ingredients.length;
+        pizza_ingredients[len][0] += 1;
     }
     @Override
     public String toString() {
